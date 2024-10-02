@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F1F1C6;
+}
+
+.card {
+	position: relative;
+	max-width: 350px;
+	height: 500px;
+	border-radius: 50px;
+	background-color: white;
+}
+
+.card_header {
+	border-radius: inherit;
+	height: 200px;
+	background: url(./header-bg.png) no-repeat bottom;
+	background-size: 400px 210px;
+} 
+
+.card .card_header .profile-image {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.card .card_header .profile-image img {
+	object-fit: cover;
+	width: 40%;
+}
+
+.card .card_body {
+	text-align: center;
+	padding-block: 2rem;
+
+	& .heading {
+		position: relative;
+		font-size: 28px;
+		text-transform: capitalize;
+		font-weight: 600;
+		font-family: 'Poppins', sans-serif;
+			&::after {
+				content: attr(data-username);
+				position: relative;
+				display: block;
+				top: 0;
+				left: 0;
+				font-size: 0.89rem;
+				font-weight: 300;
+				color: gray;
+				padding: 0.5rem;
+			}
+
+	}
+
+	& .social_icons {
+		padding-block: 0.9rem;
+	}
+
+	& .social_icons > * {
+		margin: 0.5rem;
+		font-size: 1.2rem;
+		color: #000;
+	}
+
+	& .card_text {
+		padding: 0.65rem;
+	}
+
+	& .btn_action {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		padding-block-start: 0.8rem;
+
+		& .follow-btn {
+			width: 120px;
+			height: 40px;
+			border-radius: 50px;
+			background-color: #E03F8D;
+			border: none;
+			color: #fff;
+			text-transform: capitalize;
+			letter-spacing: 1.2px;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: .3s;
+
+			&:hover {
+				border: 2px solid #999999;
+				background-color: #fff;
+				color: #999999;
+				border: none;
+			}
+		}
+
+		& :nth-child(2) {
+			width: 120px;
+			height: 40px;
+			border-radius: 50px;
+			background-color: #fff;
+			border: none;
+			color: #999999;
+			border: 2px solid #999999;
+			text-transform: capitalize;
+			letter-spacing: 1.2px;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: .3s;
+
+			&:hover {
+				background-color: #E03F8D;
+				color: #fff;
+				border: none;
+			}
+		}
+	}
+}
